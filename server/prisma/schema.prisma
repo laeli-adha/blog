@@ -1,0 +1,65 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  categories        Category[]
+  createdAt         DateTime       @default(now())
+  email             String?        @unique
+  firstName         String?
+  id                String         @id @default(cuid())
+  lastName          String?
+  password          String
+  roles             Json
+  transactionsItems Transactions[]
+  updatedAt         DateTime       @updatedAt
+  username          String         @unique
+  wallets           Wallet[]
+}
+
+model Wallet {
+  amount            Float
+  color             String?
+  createdAt         DateTime       @default(now())
+  description       String?
+  icon              String?
+  id                String         @id @default(cuid())
+  name              String
+  transactionsItems Transactions[]
+  updatedAt         DateTime       @updatedAt
+  userId            User           @relation(fields: [userIdId], references: [id])
+  userIdId          String
+}
+
+model Transactions {
+  amount       Float
+  categoryId   Category @relation(fields: [categoryIdId], references: [id])
+  categoryIdId String
+  createdAt    DateTime @default(now())
+  description  String?
+  id           String   @id @default(cuid())
+  updatedAt    DateTime @updatedAt
+  userId       User?    @relation(fields: [userId], references: [id])
+  userId       String?
+  walletId     Wallet   @relation(fields: [wallet], references: [id])
+  wallet       String
+}
+
+model Category {
+  color             String?
+  createdAt         DateTime       @default(now())
+  description       String?
+  icon              String?
+  id                String         @id @default(cuid())
+  name              String?
+  transactionsItems Transactions[]
+  typeField         String?
+  updatedAt         DateTime       @updatedAt
+  userId            User?          @relation(fields: [userId], references: [id])
+  userId            String?
+}
