@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { UserModule } from "./user/user.module";
-import { WalletModule } from "./wallet/wallet.module";
 import { TransactionsModule } from "./transactions/transactions.module";
+import { WalletModule } from "./wallet/wallet.module";
 import { CategoryModule } from "./category/category.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
@@ -21,8 +21,8 @@ import { AuthModule } from "./auth/auth.module";
     ACLModule,
     AuthModule,
     UserModule,
-    WalletModule,
     TransactionsModule,
+    WalletModule,
     CategoryModule,
     HealthModule,
     PrismaModule,

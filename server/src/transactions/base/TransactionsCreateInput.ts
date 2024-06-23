@@ -14,6 +14,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import {
   IsNumber,
   ValidateNested,
+  IsDate,
   IsString,
   IsOptional,
 } from "class-validator";
@@ -40,6 +41,14 @@ class TransactionsCreateInput {
   @Type(() => CategoryWhereUniqueInput)
   @Field(() => CategoryWhereUniqueInput)
   categoryId!: CategoryWhereUniqueInput;
+
+  @ApiProperty({
+    required: true,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @Field(() => Date)
+  date!: Date;
 
   @ApiProperty({
     required: false,

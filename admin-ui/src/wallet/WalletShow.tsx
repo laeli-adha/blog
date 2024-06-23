@@ -45,6 +45,7 @@ export const WalletShow = (props: ShowProps): React.ReactElement => {
               <TextField source={CATEGORY_TITLE_FIELD} />
             </ReferenceField>
             <DateField source="createdAt" label="Created At" />
+            <TextField label="date" source="date" />
             <TextField label="description" source="description" />
             <TextField label="ID" source="id" />
             <DateField source="updatedAt" label="Updated At" />

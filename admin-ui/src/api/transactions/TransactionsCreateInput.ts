@@ -5,6 +5,7 @@ import { WalletWhereUniqueInput } from "../wallet/WalletWhereUniqueInput";
 export type TransactionsCreateInput = {
   amount: number;
   categoryId: CategoryWhereUniqueInput;
+  date: Date;
   description?: string | null;
   userId?: UserWhereUniqueInput | null;
   walletId: WalletWhereUniqueInput;

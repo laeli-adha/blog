@@ -275,6 +275,7 @@ export class WalletControllerBase {
         },
 
         createdAt: true,
+        date: true,
         description: true,
         id: true,
         updatedAt: true,

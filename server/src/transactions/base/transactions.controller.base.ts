@@ -76,6 +76,7 @@ export class TransactionsControllerBase {
         },
 
         createdAt: true,
+        date: true,
         description: true,
         id: true,
         updatedAt: true,
@@ -123,6 +124,7 @@ export class TransactionsControllerBase {
         },
 
         createdAt: true,
+        date: true,
         description: true,
         id: true,
         updatedAt: true,
@@ -169,6 +171,7 @@ export class TransactionsControllerBase {
         },
 
         createdAt: true,
+        date: true,
         description: true,
         id: true,
         updatedAt: true,
@@ -240,6 +243,7 @@ export class TransactionsControllerBase {
           },
 
           createdAt: true,
+          date: true,
           description: true,
           id: true,
           updatedAt: true,
@@ -294,6 +298,7 @@ export class TransactionsControllerBase {
           },
 
           createdAt: true,
+          date: true,
           description: true,
           id: true,
           updatedAt: true,

@@ -31,61 +31,61 @@
   },
   {
     "role": "user",
-    "resource": "Wallet",
+    "resource": "Transactions",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wallet",
+    "resource": "Transactions",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wallet",
+    "resource": "Transactions",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wallet",
+    "resource": "Transactions",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wallet",
+    "resource": "Transactions",
     "action": "read:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Transactions",
+    "resource": "Wallet",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Transactions",
+    "resource": "Wallet",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Transactions",
+    "resource": "Wallet",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Transactions",
+    "resource": "Wallet",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Transactions",
+    "resource": "Wallet",
     "action": "read:any",
     "attributes": "*"
   },

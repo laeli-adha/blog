@@ -6,6 +6,7 @@ export type Transactions = {
   amount: number;
   categoryId?: Category;
   createdAt: Date;
+  date: Date;
   description: string | null;
   id: string;
   updatedAt: Date;

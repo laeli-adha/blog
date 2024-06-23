@@ -15,6 +15,7 @@ import {
   IsNumber,
   IsOptional,
   ValidateNested,
+  IsDate,
   IsString,
 } from "class-validator";
 import { CategoryWhereUniqueInput } from "../../category/base/CategoryWhereUniqueInput";
@@ -46,6 +47,17 @@ class TransactionsUpdateInput {
     nullable: true,
   })
   categoryId?: CategoryWhereUniqueInput;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  date?: Date;
 
   @ApiProperty({
     required: false,

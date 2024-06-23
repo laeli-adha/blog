@@ -7,6 +7,7 @@ import {
   NumberInput,
   ReferenceInput,
   SelectInput,
+  DateInput,
   TextInput,
 } from "react-admin";
 
@@ -26,6 +27,7 @@ export const TransactionsEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectInput optionText={CategoryTitle} />
         </ReferenceInput>
+        <DateInput label="date" source="date" />
         <TextInput label="description" multiline source="description" />
         <ReferenceInput source="userId.id" reference="User" label="User">
           <SelectInput optionText={UserTitle} />

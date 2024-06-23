@@ -15,6 +15,7 @@ import { FloatFilter } from "../../util/FloatFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
 import { CategoryWhereUniqueInput } from "../../category/base/CategoryWhereUniqueInput";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
@@ -44,6 +45,17 @@ class TransactionsWhereInput {
     nullable: true,
   })
   categoryId?: CategoryWhereUniqueInput;
+
+  @ApiProperty({
+    required: false,
+    type: DateTimeFilter,
+  })
+  @Type(() => DateTimeFilter)
+  @IsOptional()
+  @Field(() => DateTimeFilter, {
+    nullable: true,
+  })
+  date?: DateTimeFilter;
 
   @ApiProperty({
     required: false,

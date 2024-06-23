@@ -50,6 +50,14 @@ class Transactions {
   createdAt!: Date;
 
   @ApiProperty({
+    required: true,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @Field(() => Date)
+  date!: Date;
+
+  @ApiProperty({
     required: false,
     type: String,
   })

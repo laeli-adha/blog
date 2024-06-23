@@ -22,6 +22,21 @@ model User {
   wallets           Wallet[]
 }
 
+model Transactions {
+  amount       Float
+  categoryId   Category @relation(fields: [categoryIdId], references: [id])
+  categoryIdId String
+  createdAt    DateTime @default(now())
+  date         DateTime
+  description  String?
+  id           String   @id @default(cuid())
+  updatedAt    DateTime @updatedAt
+  userId       User?    @relation(fields: [userId], references: [id])
+  userId       String?
+  walletId     Wallet   @relation(fields: [wallet], references: [id])
+  wallet       String
+}
+
 model Wallet {
   amount            Float
   color             String?
@@ -34,20 +49,6 @@ model Wallet {
   updatedAt         DateTime       @updatedAt
   userId            User           @relation(fields: [userIdId], references: [id])
   userIdId          String
-}
-
-model Transactions {
-  amount       Float
-  categoryId   Category @relation(fields: [categoryIdId], references: [id])
-  categoryIdId String
-  createdAt    DateTime @default(now())
-  description  String?
-  id           String   @id @default(cuid())
-  updatedAt    DateTime @updatedAt
-  userId       User?    @relation(fields: [userId], references: [id])
-  userId       String?
-  walletId     Wallet   @relation(fields: [wallet], references: [id])
-  wallet       String
 }
 
 model Category {
